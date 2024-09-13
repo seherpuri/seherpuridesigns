@@ -11897,7 +11897,7 @@ strong {
 
 @media only screen and (max-width:767px) {
     .plFg0c {
-        display: block
+        display: table-cell
     }
 }
 
