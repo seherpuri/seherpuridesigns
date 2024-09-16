@@ -39,10 +39,22 @@ function loadMenu() {
 loadMenu();
 
 // Initialize menu scripts after the menu content is fully loaded
+// function initializeMenuScripts() {
+//     var hamburgerIcon = document.getElementById('hamburger-icon');
+//     if (hamburgerIcon) {
+//         hamburgerIcon.addEventListener('click', toggleMenu);
+//     }
+// }
+
 function initializeMenuScripts() {
     var hamburgerIcon = document.getElementById('hamburger-icon');
     if (hamburgerIcon) {
+        // Remove any existing click event listeners
+        hamburgerIcon.removeEventListener('click', toggleMenu);
+        // Add a new click event listener
         hamburgerIcon.addEventListener('click', toggleMenu);
+    } else {
+        console.error('hamburger-icon element not found in the DOM');
     }
 }
 
