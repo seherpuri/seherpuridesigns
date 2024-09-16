@@ -59,9 +59,18 @@ function initializeMenuScripts() {
 }
 
 function toggleMenu() {
+    let menuActive = false;
+
     var menu = document.getElementById("navbar");
-    if (menu) {
-        menu.classList.toggle("active");
-    }
+    // if (menu) {
+    //     menu.classList.toggle("active");
+    // }
+     if (!menuActive) {
+            menu.classList.add("active");
+            menuActive = true;
+        } else {
+            menu.classList.remove("active");
+            menuActive = false;
+        }
     console.log(menu.classList)
 }
