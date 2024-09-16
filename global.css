@@ -39386,23 +39386,23 @@ driver-viewer-gm3 .ndfHFb-c4YZDc-dZssN-dMDEpe-oQyWnf-Sx9Kwc-c6xFrd,
     display: block; /* Show when active */
 }
 
-ul {
+.nav-menu ul {
     list-style: none;
     padding: 0;
 }
 
-ul li {
+.nav-menu.active ul li {
     margin: 10px 0;
 }
 
-ul li a {
+.nav-menu.active ul li a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 @media (min-width: 768px) {
     .nav-menu {
-        display: flex; /* Display the menu in a row on larger screens */
+        display: none;
     }
 }
 
