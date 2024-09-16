@@ -39372,6 +39372,34 @@ driver-viewer-gm3 .ndfHFb-c4YZDc-dZssN-dMDEpe-oQyWnf-Sx9Kwc-c6xFrd,
     --dt-corner-tile: 0.375rem
 }
 
+/* Basic styles for the menu */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: none; /* Hidden by default */
+}
+
+.nav-menu.active {
+    display: block; /* Show when active */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+}
+
 .vhoiae,
 .X9XeLb,
 .cWKK1c,
