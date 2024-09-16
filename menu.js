@@ -19,5 +19,10 @@ function initializeMenuScripts() {
 // Example toggle function for the hamburger menu
 function toggleMenu() {
     var menu = document.getElementById("navbar");
-    menu.classList.toggle("active");
+    //menu.classList.toggle("active");
+    if (menu.classList.contains("active")) {
+        menu.classList.remove("active");
+    } else {
+        menu.classList.add("active");
+    }
 }
