@@ -21,7 +21,7 @@ function toggleMenu() {
     var menu = document.getElementById("navbar");
     menu.classList.toggle("active");
     console.log(menu.classList)
-    if (!menu.classList.contains("active")) {
-        menu.classList.add("active");
-    }
+    // if (!menu.classList.contains("active")) {
+    //     menu.classList.add("active");
+    // }
 }
