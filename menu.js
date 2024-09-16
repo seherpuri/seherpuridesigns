@@ -31,7 +31,7 @@ function loadMenu() {
             document.getElementById('menu-container').innerHTML = data;
 
             // Use setTimeout to ensure the DOM is updated before initializing scripts
-            setTimeout(initializeMenuScripts, 250); // Wait 250ms to allow DOM update
+            //setTimeout(initializeMenuScripts, 250); // Wait 250ms to allow DOM update
         });
 }
 
