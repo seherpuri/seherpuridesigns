@@ -11753,7 +11753,7 @@ strong {
     }
 
     .p46B7e.QTKDff {
-        display: none
+        /*display: none*/
     }
 }
 
@@ -39373,23 +39373,34 @@ driver-viewer-gm3 .ndfHFb-c4YZDc-dZssN-dMDEpe-oQyWnf-Sx9Kwc-c6xFrd,
 }
 
 /* Basic styles for the menu */
+#menu-container {
+    
+}
+
 .menu-icon {
     font-size: 30px;
     cursor: pointer;
 }
 
 .nav-menu {
-    display: none; /* Hidden by default */
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease, visibility 0.5s ease, pointer-events 0s 0.5s;
 }
 
 .nav-menu.active {
-    display: block; /* Show when active */
+    opacity: 1;
+    background-color: black;
+    visibility: visible;
+    margin-top: 20px;
+    padding-bottom: 15;
+    pointer-events: auto;
+    padding-top: 15;
 }
 
 .nav-menu ul {
     list-style: none;
-    padding: 0;
-    margin-top: 56px;
     padding-right: 30px;
 }
 
