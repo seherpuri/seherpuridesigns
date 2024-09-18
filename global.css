@@ -39374,7 +39374,7 @@ driver-viewer-gm3 .ndfHFb-c4YZDc-dZssN-dMDEpe-oQyWnf-Sx9Kwc-c6xFrd,
 
 /* Basic styles for the menu */
 #menu-container {
-    
+    visibility: hidden;
 }
 
 .menu-icon {
