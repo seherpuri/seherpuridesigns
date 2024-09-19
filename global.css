@@ -39388,6 +39388,7 @@ driver-viewer-gm3 .ndfHFb-c4YZDc-dZssN-dMDEpe-oQyWnf-Sx9Kwc-c6xFrd,
     pointer-events: none;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.5s ease, pointer-events 0s 0.5s;
     transform: translateX(-100%);
+    backgroun-color: black;
 }
 
 .nav-menu.active {
@@ -39407,11 +39408,11 @@ driver-viewer-gm3 .ndfHFb-c4YZDc-dZssN-dMDEpe-oQyWnf-Sx9Kwc-c6xFrd,
     padding-right: 30px;
 }
 
-.nav-menu.active ul li {
+.nav-menu ul li {
     margin: 10px 0;
 }
 
-.nav-menu.active ul li a {
+.nav-menu ul li a {
     text-decoration: none;
     color: white;
 }
