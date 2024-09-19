@@ -39404,6 +39404,7 @@ driver-viewer-gm3 .ndfHFb-c4YZDc-dZssN-dMDEpe-oQyWnf-Sx9Kwc-c6xFrd,
     padding-top: 15;
     transform: translateX(0);
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.5s;
+    font-family: 'Oswald';
 }
 
 .nav-menu ul {
