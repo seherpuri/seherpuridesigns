@@ -39388,7 +39388,10 @@ driver-viewer-gm3 .ndfHFb-c4YZDc-dZssN-dMDEpe-oQyWnf-Sx9Kwc-c6xFrd,
     pointer-events: none;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.5s ease, pointer-events 0s 0.5s;
     transform: translateX(-100%);
-    backgroun-color: black;
+    background-color: black;
+    margin-top: 20px;
+    padding-bottom: 15;
+    padding-top: 15;
 }
 
 .nav-menu.active {
