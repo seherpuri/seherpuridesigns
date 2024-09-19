@@ -39386,7 +39386,8 @@ driver-viewer-gm3 .ndfHFb-c4YZDc-dZssN-dMDEpe-oQyWnf-Sx9Kwc-c6xFrd,
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.5s ease, visibility 0.5s ease, pointer-events 0s 0.5s;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.5s ease, pointer-events 0s 0.5s;
+    transform: translateX(-100%);
 }
 
 .nav-menu.active {
@@ -39397,6 +39398,8 @@ driver-viewer-gm3 .ndfHFb-c4YZDc-dZssN-dMDEpe-oQyWnf-Sx9Kwc-c6xFrd,
     padding-bottom: 15;
     pointer-events: auto;
     padding-top: 15;
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.5s;
 }
 
 .nav-menu ul {
