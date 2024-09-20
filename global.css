@@ -39397,24 +39397,22 @@ driver-viewer-gm3 .ndfHFb-c4YZDc-dZssN-dMDEpe-oQyWnf-Sx9Kwc-c6xFrd,
     padding-bottom: 15;
     padding-top: 15;
     font-family: 'Oswald';
+    border: 0.1px solid black;
+    border-radius: 15px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
 }
 
 .nav-menu.active {
     opacity: 1;
-    background-color: black;
     visibility: visible;
-    margin-top: 20px;
-    padding-bottom: 15;
     pointer-events: auto;
-    padding-top: 15;
     transform: translateX(0);
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.5s;
-    font-family: 'Oswald';
 }
 
 .nav-menu ul {
     list-style: none;
-    padding-right: 30px;
+    padding-left: 0px;
 }
 
 .nav-menu ul li {
@@ -39424,6 +39422,8 @@ driver-viewer-gm3 .ndfHFb-c4YZDc-dZssN-dMDEpe-oQyWnf-Sx9Kwc-c6xFrd,
 .nav-menu ul li a {
     text-decoration: none;
     color: white;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 @media (min-width: 768px) {
