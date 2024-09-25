@@ -41,6 +41,39 @@
     <script nonce=""></script>
     <link rel="stylesheet" href="global.css">
     <title>Seher Puri Designs - Showcase</title>
+    <style>
+  .t3iYD {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* Adjust based on your layout */
+  }
+
+  .t3iYD img {
+    width: 100%; /* Ensures the thumbnail takes full width of the container */
+    display: block;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Black overlay with transparency */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  .t3iYD:hover .overlay {
+    opacity: 1; /* Shows the overlay on hover */
+  }
+</style>
     <style jsname="ptDGoc" nonce="">
         .ImnMyf {
             background-color: rgba(255, 255, 255, 1);
@@ -1835,6 +1868,7 @@
                                                                             <img
                                                                             src="Assets/images/Asset1b.jpg"
                                                                             class="CENy8b" role="img">
+                                                                            <div class="overlay">View Full Size</div>
                                                                         </a>
                                                                     </div>
                                                                 </div>
@@ -1859,6 +1893,7 @@
                                                                             <img src="Assets/images/Asset2b.jpg"
                                                                             class="CENy8b" role="img"
                                                                             style="width: 100.0000026925%; margin: 0% 0 0% -0.0000013463%">
+                                                                            <div class="overlay">View Full Size</div>
                                                                         </a>
                                                                     </div>
                                                                 </div>
@@ -1883,6 +1918,7 @@
                                                                             <img
                                                                             src="Assets/images/Asset3b.jpg"
                                                                             class="CENy8b" role="img">
+                                                                            <div class="overlay">View Full Size</div>
                                                                         </a>
                                                                     </div>
                                                                 </div>
