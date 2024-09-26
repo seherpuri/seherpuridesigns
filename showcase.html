@@ -69,7 +69,7 @@
     display: inline-block;
     width: 100%;
     overflow: hidden;
-    max-height: 200px;
+    max-height: 30em;
   }
 
   .t3iYD img {
@@ -112,11 +112,11 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50px; /* Height of the gradient effect */
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
+    height: 4em; /* Height of the gradient effect */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.95) 100%);
     color: white;
     text-align: center;
-    line-height: 50px; /* Vertically centers the text */
+    line-height: 5em; /* Vertically centers the text */
     font-size: 16px;
     font-family: Oswald;
     pointer-events: none;
@@ -2157,7 +2157,9 @@
                 src="https://www.gstatic.com/_/atari/_/js/k=atari.vw.en_GB.ovW9GuntkXU.O/am=gGAAAg/d=1/rs=AGEqA5km-3LyBFuQWAOGVeldEQWMIOuvdw/m=view"
                 id="base-js" nonce=""></script>
             <script>
+                const imageContainer = document.getElementById('t3iYD');
                 const imageLink = document.getElementById('image-link1');
+                const imgElement = imageLink.querySelector('img');
                 if (window.devicePixelRatio > 1) {
                     imageLink.href = 'Assets/images/Asset1b.jpg';
                 } else {
@@ -2175,8 +2177,6 @@
                    imageContainer.classList.remove('active');
                 });
                 // Toggle between snipped and full image view
-                const imageLink = document.getElementById('image-link1');
-                const imgElement = imageLink.querySelector('img');
                 imgElement.addEventListener('click', function(event) {
                     event.preventDefault(); // Prevents the link from opening on the first click
                     if (imageContainer.classList.contains('full-view')) {
@@ -2189,7 +2189,9 @@
                 });
             </script>
             <script>
+                const imageContainer = document.getElementById('t3iYD');
                 const imageLink = document.getElementById('image-link2');
+                const imgElement = imageLink.querySelector('img');
                 if (window.devicePixelRatio > 1) {
                    imageLink.href = 'Assets/images/Asset2b.jpg';
                 } else {
@@ -2207,8 +2209,6 @@
                    imageContainer.classList.remove('active');
                 });
                 // Toggle between snipped and full image view
-                const imageLink = document.getElementById('image-link2');
-                const imgElement = imageLink.querySelector('img');
                 imgElement.addEventListener('click', function(event) {
                     event.preventDefault(); // Prevents the link from opening on the first click
                     if (imageContainer.classList.contains('full-view')) {
@@ -2221,7 +2221,9 @@
                 });
             </script>
             <script>
+                const imageContainer = document.getElementById('t3iYD');
                 const imageLink = document.getElementById('image-link3');
+                const imgElement = imageLink.querySelector('img');
                 if (window.devicePixelRatio > 1) {
                     imageLink.href = 'Assets/images/Asset3b.jpg';
                 } else {
@@ -2240,8 +2242,6 @@
                 });
 
                 // Toggle between snipped and full image view
-                const imageLink = document.getElementById('image-link3');
-                const imgElement = imageLink.querySelector('img');
                 imgElement.addEventListener('click', function(event) {
                     event.preventDefault(); // Prevents the link from opening on the first click
                     if (imageContainer.classList.contains('full-view')) {
