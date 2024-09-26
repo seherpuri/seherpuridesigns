@@ -1918,7 +1918,7 @@
                                                             class="hJDwNd-AhqUyc-II5mzb Ft7HRd-AhqUyc-II5mzb pSzOP-AhqUyc-II5mzb Ktthjf-AhqUyc-II5mzb jXK9ad D2fZ2 zu5uec OjCsFc dmUFtb wHaque g5GTcb">
                                                             <div class="jXK9ad-SmKAyb">
                                                                 <div class="tyJCtd baZpAe">
-                                                                    <div class="t3iYD">
+                                                                    <div class="t3iYD" id="image-container1">
                                                                         <a href="Assets/images/Asset1b1920.jpg" target="_blank" id="image-link1">
                                                                             <img
                                                                             src="Assets/images/Asset1b-thumb.jpg"
@@ -1943,7 +1943,7 @@
                                                             class="hJDwNd-AhqUyc-II5mzb Ft7HRd-AhqUyc-II5mzb pSzOP-AhqUyc-II5mzb Ktthjf-AhqUyc-II5mzb jXK9ad D2fZ2 zu5uec OjCsFc dmUFtb wHaque g5GTcb">
                                                             <div class="jXK9ad-SmKAyb">
                                                                 <div class="tyJCtd baZpAe">
-                                                                    <div class="t3iYD">
+                                                                    <div class="t3iYD" id="image-container2">
                                                                         <a href="Assets/images/Asset2b1920.jpg" target="_blank" id="image-link2">
                                                                             <img src="Assets/images/Asset2b-thumb.jpg"
                                                                             class="CENy8b" role="img"
@@ -1968,7 +1968,7 @@
                                                             class="hJDwNd-AhqUyc-II5mzb Ft7HRd-AhqUyc-II5mzb pSzOP-AhqUyc-II5mzb Ktthjf-AhqUyc-II5mzb jXK9ad D2fZ2 zu5uec OjCsFc dmUFtb wHaque g5GTcb">
                                                             <div class="jXK9ad-SmKAyb">
                                                                 <div class="tyJCtd baZpAe">
-                                                                    <div class="t3iYD">
+                                                                    <div class="t3iYD" id="image-container3">
                                                                         <a href="Assets/images/Asset3b1920.jpg" target="_blank" id="image-link3">
                                                                             <img
                                                                             src="Assets/images/Asset3b-thumb.jpg"
@@ -2156,7 +2156,7 @@
             <script
                 src="https://www.gstatic.com/_/atari/_/js/k=atari.vw.en_GB.ovW9GuntkXU.O/am=gGAAAg/d=1/rs=AGEqA5km-3LyBFuQWAOGVeldEQWMIOuvdw/m=view"
                 id="base-js" nonce=""></script>
-            <script>
+            <!-- <script>
                 const imageContainer = document.getElementById('t3iYD');
                 const imageLink = document.getElementById('image-link1');
                 const imgElement = imageLink.querySelector('img');
@@ -2252,7 +2252,51 @@
                       imageContainer.classList.add('full-view');
                     }
                 });
-            </script>
+            </script> -->
+            <script>
+  function setupImageEnlargement(containerId, linkId, imgSrc1x, imgSrc2x) {
+    const imageContainer = document.getElementById(containerId);
+    const imageLink = document.getElementById(linkId);
+    const imgElement = imageLink.querySelector('img');
+    
+    // Set image link based on device pixel ratio
+    if (window.devicePixelRatio > 1) {
+        imageLink.href = imgSrc2x;
+    } else {
+        imageLink.href = imgSrc1x;
+    }
+
+    // Handle touch interactions for mobile
+    imageContainer.addEventListener('touchstart', function() {
+        imageContainer.classList.add('active');
+    });
+
+    imageContainer.addEventListener('touchend', function() {
+        imageContainer.classList.remove('active');
+    });
+
+    imageContainer.addEventListener('touchmove', function() {
+        imageContainer.classList.remove('active');
+    });
+
+    // Toggle between snipped and full image view
+    imgElement.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevents the link from opening on the first click
+        if (imageContainer.classList.contains('full-view')) {
+            // If it's already in full view, open the href link
+            window.open(imageLink.href, '_blank');
+        } else {
+            // Otherwise, enlarge the image (remove the snip)
+            imageContainer.classList.add('full-view');
+        }
+    });
+  }
+
+  // Initialize each image container
+  setupImageEnlargement('image-container1', 'image-link1', 'Assets/images/Asset1b1920.jpg', 'Assets/images/Asset1b.jpg');
+  setupImageEnlargement('image-container2', 'image-link2', 'Assets/images/Asset2b1920.jpg', 'Assets/images/Asset2b.jpg');
+  setupImageEnlargement('image-container3', 'image-link3', 'Assets/images/Asset3b1920.jpg', 'Assets/images/Asset3b.jpg');
+</script>
         </div>
     </div>
     <div jscontroller="YV8yqd" jsaction="rcuQ6b:npT2md"></div>
