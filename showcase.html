@@ -2225,42 +2225,33 @@
   setupImageEnlargement('image-container2', 'image-link2', 'Assets/images/Asset2b1920.jpg', 'Assets/images/Asset2b.jpg');
   setupImageEnlargement('image-container3', 'image-link3', 'Assets/images/Asset3b1920.jpg', 'Assets/images/Asset3b.jpg');
 </script>
-
-           /* <script>
-  const iframeContainer = document.querySelector('.iframe-container iframe');
-    iframeContainer.style.pointerEvents = 'auto';
-  iframeContainer.addEventListener('touchstart', function() {
-    // Enable interaction when the user taps on the iframe
-    iframeContainer.style.pointerEvents = 'none';
-  });
-
-  iframeContainer.addEventListener('touchend', function() {
-    iframeContainer.style.pointerEvents = 'auto'; // Re-enable interaction after scroll
-  });
-</script>*/
-
-            <script>
+ <script>
         const iframeElement = document.getElementById('iframeElement');
 
-        // Set pointer-events to auto so users can interact initially
+        // Initially set pointer-events to auto so users can interact
         iframeElement.style.pointerEvents = 'auto';
 
-        // Disable interaction during touchstart and re-enable after touchend
+        // Variable to hold the timeout
+        let timeout;
+
+        // Detect when the user starts touching the iframe
         iframeElement.addEventListener('touchstart', function() {
             iframeElement.style.pointerEvents = 'none'; // Disable interaction during scroll
         }, { passive: true });
 
+        // Detect when the user stops touching the iframe
         iframeElement.addEventListener('touchend', function() {
-            iframeElement.style.pointerEvents = 'auto'; // Re-enable interaction after scroll
+            // Set a timeout to allow the user to scroll for a short duration
+            clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                iframeElement.style.pointerEvents = 'auto'; // Re-enable interaction after scrolling
+            }, 150); // Adjust delay as needed
         });
 
+        // Optional: Handle touchcancel to re-enable pointer events
         iframeElement.addEventListener('touchcancel', function() {
-            iframeElement.style.pointerEvents = 'auto'; // Ensure it re-enables on touchcancel
-        });
-
-        // Optional: Focus the iframe when clicked
-        iframeElement.addEventListener('click', function() {
-            this.contentWindow.focus();
+            clearTimeout(timeout);
+            iframeElement.style.pointerEvents = 'auto';
         });
     </script>
             
