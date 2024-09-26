@@ -39386,6 +39386,16 @@ driver-viewer-gm3 .ndfHFb-c4YZDc-dZssN-dMDEpe-oQyWnf-Sx9Kwc-c6xFrd,
     cursor: pointer;
 }
 
+.iframe-container iframe {
+    touch-action: pan-y; /* Ensures vertical scrolling */
+    pointer-events: none; /* Initially disables interaction to allow scroll */
+}
+
+/* Re-enable interaction when user interacts with the iframe */
+.iframe-container iframe.active {
+    pointer-events: auto;
+}
+
 .nav-menu {
     visibility: hidden;
     opacity: 0;
