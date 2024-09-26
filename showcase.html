@@ -2163,6 +2163,7 @@
     const imageContainer = document.getElementById(containerId);
     const imageLink = document.getElementById(linkId);
     const imgElement = imageLink.querySelector('img');
+    vlet isScrolling = false;
     
     // Set image link based on device pixel ratio
     if (window.devicePixelRatio > 1) {
@@ -2173,16 +2174,19 @@
 
     // Handle touch interactions for mobile
     imageContainer.addEventListener('touchstart', function() {
+        isScrolling = false;
         imageContainer.classList.add('active');
     });
 
     imageContainer.addEventListener('touchend', function() {
-        if (!imageContainer.classList.contains('full-view')) {
+        /*if (!imageContainer.classList.contains('full-view')) {*/
+        if (isScrolling) {
             imageContainer.classList.remove('active');
         }
     });
 
     imageContainer.addEventListener('touchmove', function() {
+        isScrolling = true;
         imageContainer.classList.remove('active'); // Hide overlay
     });
 
