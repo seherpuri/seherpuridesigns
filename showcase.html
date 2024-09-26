@@ -2157,103 +2157,7 @@
             <script
                 src="https://www.gstatic.com/_/atari/_/js/k=atari.vw.en_GB.ovW9GuntkXU.O/am=gGAAAg/d=1/rs=AGEqA5km-3LyBFuQWAOGVeldEQWMIOuvdw/m=view"
                 id="base-js" nonce=""></script>
-            <!-- <script>
-                const imageContainer = document.getElementById('t3iYD');
-                const imageLink = document.getElementById('image-link1');
-                const imgElement = imageLink.querySelector('img');
-                if (window.devicePixelRatio > 1) {
-                    imageLink.href = 'Assets/images/Asset1b.jpg';
-                } else {
-                    imageLink.href = 'Assets/images/Asset1b1920.jpg';
-                }
-                imageContainer.addEventListener('touchstart', function() {
-                    imageContainer.classList.add('active');
-                });
-
-                imageContainer.addEventListener('touchend', function() {
-                   imageContainer.classList.remove('active');
-                });
-
-                imageContainer.addEventListener('touchmove', function() {
-                   imageContainer.classList.remove('active');
-                });
-                // Toggle between snipped and full image view
-                imgElement.addEventListener('click', function(event) {
-                    event.preventDefault(); // Prevents the link from opening on the first click
-                    if (imageContainer.classList.contains('full-view')) {
-                      // If it's already in full view, open the href link
-                      window.open(imageLink.href, '_blank');
-                    } else {
-                      // Otherwise, enlarge the image (remove the snip)
-                      imageContainer.classList.add('full-view');
-                    }
-                });
-            </script>
-            <script>
-                const imageContainer = document.getElementById('t3iYD');
-                const imageLink = document.getElementById('image-link2');
-                const imgElement = imageLink.querySelector('img');
-                if (window.devicePixelRatio > 1) {
-                   imageLink.href = 'Assets/images/Asset2b.jpg';
-                } else {
-                   imageLink.href = 'Assets/images/Asset2b1920.jpg';
-                }
-                imageContainer.addEventListener('touchstart', function() {
-                    imageContainer.classList.add('active');
-                });
-
-                imageContainer.addEventListener('touchend', function() {
-                   imageContainer.classList.remove('active');
-                });
-
-                imageContainer.addEventListener('touchmove', function() {
-                   imageContainer.classList.remove('active');
-                });
-                // Toggle between snipped and full image view
-                imgElement.addEventListener('click', function(event) {
-                    event.preventDefault(); // Prevents the link from opening on the first click
-                    if (imageContainer.classList.contains('full-view')) {
-                      // If it's already in full view, open the href link
-                      window.open(imageLink.href, '_blank');
-                    } else {
-                      // Otherwise, enlarge the image (remove the snip)
-                      imageContainer.classList.add('full-view');
-                    }
-                });
-            </script>
-            <script>
-                const imageContainer = document.getElementById('t3iYD');
-                const imageLink = document.getElementById('image-link3');
-                const imgElement = imageLink.querySelector('img');
-                if (window.devicePixelRatio > 1) {
-                    imageLink.href = 'Assets/images/Asset3b.jpg';
-                } else {
-                    imageLink.href = 'Assets/images/Asset3b1920.jpg';
-                }
-                imageContainer.addEventListener('touchstart', function() {
-                    imageContainer.classList.add('active');
-                });
-
-                imageContainer.addEventListener('touchend', function() {
-                   imageContainer.classList.remove('active');
-                });
-
-                imageContainer.addEventListener('touchmove', function() {
-                   imageContainer.classList.remove('active');
-                });
-
-                // Toggle between snipped and full image view
-                imgElement.addEventListener('click', function(event) {
-                    event.preventDefault(); // Prevents the link from opening on the first click
-                    if (imageContainer.classList.contains('full-view')) {
-                      // If it's already in full view, open the href link
-                      window.open(imageLink.href, '_blank');
-                    } else {
-                      // Otherwise, enlarge the image (remove the snip)
-                      imageContainer.classList.add('full-view');
-                    }
-                });
-            </script> -->
+           
             <script>
   function setupImageEnlargement(containerId, linkId, imgSrc1x, imgSrc2x) {
     const imageContainer = document.getElementById(containerId);
@@ -2272,17 +2176,9 @@
         imageContainer.classList.add('active');
     });
 
-    /* imageContainer.addEventListener('touchend', function() {
+    imageContainer.addEventListener('touchend', function() {
         if (!imageContainer.classList.contains('full-view')) {
             imageContainer.classList.remove('active');
-        }
-    }); */
-
-    imageContainer.addEventListener('touchend', function() {
-        imageContainer.classList.remove('active'); // Hide overlay
-        // Check if in full view; if not, we allow the click to work
-        if (!imageContainer.classList.contains('full-view')) {
-            event.preventDefault();
         }
     });
 
