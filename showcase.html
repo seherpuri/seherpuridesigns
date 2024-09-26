@@ -2227,22 +2227,25 @@
 </script>
 
             <script>
-  const iframe = document.querySelector('.iframe-container iframe');
-
-  iframe.addEventListener('touchstart', function() {
+  const iframeContainer = document.querySelector('.iframe-container iframe');
+    iframeContainer.style.pointerEvents = 'auto';
+  iframeContainer.addEventListener('touchstart', function() {
     // Enable interaction when the user taps on the iframe
-    iframe.classList.add('active');
+    iframeContainer.style.pointerEvents = 'none';
   });
 
-  iframe.addEventListener('touchmove', function() {
-    // Disable interaction during vertical scrolling
-    iframe.classList.remove('active');
+  iframeContainer.addEventListener('touchmove', function() {
+    iframeContainer.style.pointerEvents = 'none';
   });
 
   document.addEventListener('scroll', function() {
-    // Remove iframe interaction on general scrolling
-    iframe.classList.remove('active');
+    // Remove iframeContainer interaction on general scrolling
+    iframeContainer.style.pointerEvents = 'none';
   });
+
+iframeContainer.addEventListener('touchend', function() {
+    iframeContainer.style.pointerEvents = 'auto'; // Re-enable interaction after scroll
+    });
 </script>
             
         </div>
