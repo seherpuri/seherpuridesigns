@@ -2193,14 +2193,17 @@
     // Toggle between snipped and full image view
     imageContainer.addEventListener('click', function(event) {
         event.preventDefault(); // Prevents the link from opening on the first click
+        const overlay = imageContainer.querySelector('.overlay');
         if (imageContainer.classList.contains('full-view')) {
             imageContainer.classList.remove('full-view');
+            if (overlay) {
+                overlay.style.display = 'flex'; // Show the overlay
+            }
             // If it's already in full view, open the href link
             window.open(imageLink.href, '_blank');
         } else {
             // Otherwise, enlarge the image (remove the snip)
             imageContainer.classList.add('full-view');
-            const overlay = imageContainer.querySelector('.overlay');
             if (overlay) {
                 overlay.style.display = 'none'; // Hide the overlay
             }
