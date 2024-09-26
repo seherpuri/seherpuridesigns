@@ -121,6 +121,13 @@
     font-family: Oswald;
     pointer-events: none;
   }
+  .t3iYD.full-view {
+    max-height: none; /* Removes the snip */
+  }
+
+  .t3iYD.full-view::before {
+    content: ''; /* Hide the "Click to view" text when in full view */
+  }
 </style>
     <style jsname="ptDGoc" nonce="">
         .ImnMyf {
@@ -2167,6 +2174,19 @@
                 imageContainer.addEventListener('touchmove', function() {
                    imageContainer.classList.remove('active');
                 });
+                // Toggle between snipped and full image view
+                const imageLink = document.getElementById('image-link1');
+                const imgElement = imageLink.querySelector('img');
+                imgElement.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevents the link from opening on the first click
+                    if (imageContainer.classList.contains('full-view')) {
+                      // If it's already in full view, open the href link
+                      window.open(imageLink.href, '_blank');
+                    } else {
+                      // Otherwise, enlarge the image (remove the snip)
+                      imageContainer.classList.add('full-view');
+                    }
+                });
             </script>
             <script>
                 const imageLink = document.getElementById('image-link2');
@@ -2186,6 +2206,19 @@
                 imageContainer.addEventListener('touchmove', function() {
                    imageContainer.classList.remove('active');
                 });
+                // Toggle between snipped and full image view
+                const imageLink = document.getElementById('image-link2');
+                const imgElement = imageLink.querySelector('img');
+                imgElement.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevents the link from opening on the first click
+                    if (imageContainer.classList.contains('full-view')) {
+                      // If it's already in full view, open the href link
+                      window.open(imageLink.href, '_blank');
+                    } else {
+                      // Otherwise, enlarge the image (remove the snip)
+                      imageContainer.classList.add('full-view');
+                    }
+                });
             </script>
             <script>
                 const imageLink = document.getElementById('image-link3');
@@ -2204,6 +2237,20 @@
 
                 imageContainer.addEventListener('touchmove', function() {
                    imageContainer.classList.remove('active');
+                });
+
+                // Toggle between snipped and full image view
+                const imageLink = document.getElementById('image-link3');
+                const imgElement = imageLink.querySelector('img');
+                imgElement.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevents the link from opening on the first click
+                    if (imageContainer.classList.contains('full-view')) {
+                      // If it's already in full view, open the href link
+                      window.open(imageLink.href, '_blank');
+                    } else {
+                      // Otherwise, enlarge the image (remove the snip)
+                      imageContainer.classList.add('full-view');
+                    }
                 });
             </script>
         </div>
