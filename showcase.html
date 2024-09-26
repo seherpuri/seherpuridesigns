@@ -2234,18 +2234,18 @@
     iframeContainer.style.pointerEvents = 'none';
   });
 
-  iframeContainer.addEventListener('touchmove', function() {
+  /*iframeContainer.addEventListener('touchmove', function() {
     iframeContainer.style.pointerEvents = 'none';
   });
 
   document.addEventListener('scroll', function() {
     // Remove iframeContainer interaction on general scrolling
     iframeContainer.style.pointerEvents = 'none';
-  });
+  });*/
 
-iframeContainer.addEventListener('touchend', function() {
+  iframeContainer.addEventListener('touchend', function() {
     iframeContainer.style.pointerEvents = 'auto'; // Re-enable interaction after scroll
-    });
+  });
 </script>
             
         </div>
