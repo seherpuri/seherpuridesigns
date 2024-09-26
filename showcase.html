@@ -1990,13 +1990,17 @@
                             <hr class="styled-divider">
                             <h1 class="styled-header JYVBee"> Tiffin Mobile App Interactive</h1>
                             <section class="yaqOZd" style="text-align:center;">
+                                <div class="iframe-container">
                                 <iframe
                                     style="border: 2px solid rgba(0, 0, 0, 0.1);text-align:center;"
+                                    touch-action: pan-y;
+                                    pointer-events: none;
                                     width=auto
                                     height="800"
                                     src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/OCLgbbjBeZVTxPb2pfB7Yx/Tiffin_Restaurant-Delivery-App-Design?scaling=scale-down&content-scaling=fixed&page-id=0%3A1&node-id=1-3"
                                     allowfullscreen>
                                 </iframe>
+                                </div>
                             </section>
                             <section id="h.4c4c6c8263952386_252" class="yaqOZd qeLZfd">
                                 <div class="IFuOkc"></div>
@@ -2221,6 +2225,26 @@
   setupImageEnlargement('image-container2', 'image-link2', 'Assets/images/Asset2b1920.jpg', 'Assets/images/Asset2b.jpg');
   setupImageEnlargement('image-container3', 'image-link3', 'Assets/images/Asset3b1920.jpg', 'Assets/images/Asset3b.jpg');
 </script>
+
+            <script>
+  const iframe = document.querySelector('.iframe-container iframe');
+
+  iframe.addEventListener('touchstart', function() {
+    // Enable interaction when the user taps on the iframe
+    iframe.classList.add('active');
+  });
+
+  iframe.addEventListener('touchmove', function() {
+    // Disable interaction during vertical scrolling
+    iframe.classList.remove('active');
+  });
+
+  document.addEventListener('scroll', function() {
+    // Remove iframe interaction on general scrolling
+    iframe.classList.remove('active');
+  });
+</script>
+            
         </div>
     </div>
     <div jscontroller="YV8yqd" jsaction="rcuQ6b:npT2md"></div>
