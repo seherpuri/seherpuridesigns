@@ -2163,7 +2163,7 @@
     const imageContainer = document.getElementById(containerId);
     const imageLink = document.getElementById(linkId);
     const imgElement = imageLink.querySelector('img');
-    vlet isScrolling = false;
+    let isScrolling = false;
     
     // Set image link based on device pixel ratio
     if (window.devicePixelRatio > 1) {
@@ -2206,6 +2206,7 @@
             // If it's already in full view, open the href link
             window.open(imageLink.href, '_blank');
         } else {
+             event.preventDefault();
             // Otherwise, enlarge the image (remove the snip)
             imageContainer.classList.add('full-view');
             if (overlay) {
