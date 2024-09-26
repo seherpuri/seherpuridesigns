@@ -1887,7 +1887,7 @@
                                                             <div class="jXK9ad-SmKAyb">
                                                                 <div class="tyJCtd baZpAe">
                                                                     <div class="t3iYD">
-                                                                        <a href="Assets/images/Asset1b1920.jpg" target="_blank">
+                                                                        <a href="Assets/images/Asset1b1920.jpg" target="_blank" id="image-link1">
                                                                             <img
                                                                             src="Assets/images/Asset1b-thumb.jpg"
                                                                             class="CENy8b" role="img">
@@ -1912,7 +1912,7 @@
                                                             <div class="jXK9ad-SmKAyb">
                                                                 <div class="tyJCtd baZpAe">
                                                                     <div class="t3iYD">
-                                                                        <a href="Assets/images/Asset2b1920.jpg" target="_blank">
+                                                                        <a href="Assets/images/Asset2b1920.jpg" target="_blank" id="image-link2">
                                                                             <img src="Assets/images/Asset2b-thumb.jpg"
                                                                             class="CENy8b" role="img"
                                                                             style="width: 100.0000026925%; margin: 0% 0 0% -0.0000013463%">
@@ -1937,7 +1937,7 @@
                                                             <div class="jXK9ad-SmKAyb">
                                                                 <div class="tyJCtd baZpAe">
                                                                     <div class="t3iYD">
-                                                                        <a href="Assets/images/Asset3b1920.jpg" target="_blank">
+                                                                        <a href="Assets/images/Asset3b1920.jpg" target="_blank" id="image-link3">
                                                                             <img
                                                                             src="Assets/images/Asset3b-thumb.jpg"
                                                                             class="CENy8b" role="img">
@@ -2124,6 +2124,30 @@
             <script
                 src="https://www.gstatic.com/_/atari/_/js/k=atari.vw.en_GB.ovW9GuntkXU.O/am=gGAAAg/d=1/rs=AGEqA5km-3LyBFuQWAOGVeldEQWMIOuvdw/m=view"
                 id="base-js" nonce=""></script>
+            <script>
+                const imageLink = document.getElementById('image-link1');
+                if (window.devicePixelRatio > 1) {
+                    imageLink.href = 'Assets/images/Asset1b.jpg';
+                } else {
+                    imageLink.href = 'Assets/images/Asset1b1920.jpg';
+                }
+            </script>
+            <script>
+                const imageLink = document.getElementById('image-link2');
+                if (window.devicePixelRatio > 1) {
+                   imageLink.href = 'Assets/images/Asset2b.jpg';
+                } else {
+                   imageLink.href = 'Assets/images/Asset2b1920.jpg';
+                }
+            </script>
+            <script>
+                const imageLink = document.getElementById('image-link3');
+                if (window.devicePixelRatio > 1) {
+                    imageLink.href = 'Assets/images/Asset3b.jpg';
+                } else {
+                    imageLink.href = 'Assets/images/Asset3b1920.jpg';
+                }
+            </script>
         </div>
     </div>
     <div jscontroller="YV8yqd" jsaction="rcuQ6b:npT2md"></div>
